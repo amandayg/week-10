@@ -1,72 +1,187 @@
 body {
-    padding: 0;
-    overflow: hidden;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding: 0;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+table td{
+  width:400px;
+  /*padding-right: 100px;*/
 }
 
 .map {
-    position: absolute;
-    right: 0px;
-    left: 340px;
-    height: 100%;
-    top: 0;
+  position: absolute;
+  right: 0px;
+  left: 530px;
+  height: 100%;
+  top: 0;
 }
 
-.sidebar {
-    position: absolute;
-    left: 0px;
-    width: 340px;
-    top: 0;
-    bottom: 0;
-    overflow-y: auto;
-    padding: 20px;
-    padding-bottom: 60px;
+.col-5 {
+  position: absolute;
+  left: 180px;
+  width: 350px;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  padding: 20px;
+  padding-bottom: 60px;
 }
 
+
+.col {
+  position: absolute;
+  left: 0px;
+  width: 180x;
+  top: 0;
+  bottom: 0;
+  color: white;
+  /*overflow-y: auto;*/
+  padding: 20px;
+  /*padding-bottom: 60px;*/
+  background-color: #26453D;
+}
+
+.col:first-child{
+  position: absolute;
+  left: 0;
+  width:180px;
+}
+
+.dropdown{
+  position: absolute;
+  top: 10px;
+  left:220px;
+}
+
+#heading{
+  position: absolute;
+  top: 20px;
+  left:20px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#dropdownMenu1{
+  background-color: #58B2DC;
+}
+
+.search{
+  position: relative;
+  top: 40px;
+  width: 350px;
+  margin-bottom: 40px;
+  color:#58B2DC;
+}
+
+.search>input{
+  width: 293px;
+  margin-bottom: 15px;
+}
+
+.glyphicon.glyphicon-search{
+  position:relative;
+  top:1px;
+  left:-40px;
+  height:25px;
+  width: 37px;
+}
+
+#low{
+  position: relative;
+  left:0;
+  background-color:#CB1B45;
+  color:white;
+  font-size: 12px;
+  padding: 5px;
+}
 .item {
-    padding: 10px;
-    background-color: #eee;
+  padding: 5px;
+  background-color: #eee;
 }
 
 .item:not(:last-child) {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .item-heading {
-    font-size: 18px;
-    margin-top: 0;
-    font-weight: bold;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
 }
 
 .sort {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 340px;
-    background-color: #fff;
-    padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 180px;
+  width: 350px;
+  background-color: #fff;
+  padding: 20px;
 }
 
 .sort-option {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .sort-option.selected {
-    border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
-.sidebar nav.navbar-default {
-    border: 0;
-    border-radius: 0;
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
-    margin: -14px -20px 20px;
-    padding: 10px 20px 15px;
+.col-5.navbar-navbar-default {
+  border: 0;
+  border-radius: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  margin: -14px -20px 20px;
+  padding: 10px 20px 15px;
 }
 
-.navbar-brand {
-    font-size: 14px;
-    font-weight: bold;
+
+.glyphicon.glyphicon-shopping-cart {
+  position: relative;
+  left: 8px;
+}
+
+.nav.nav-pills.nav-stacked{
+  position:absolute;
+  color: white;
+  left:0;
+  width:180px;
+}
+
+.nav.nav-pills.nav-stacked>label{
+  width:180px;
+}
+
+.glyphicon.glyphicon-map-marker{
+  padding-left: 5px;
+  background-color: #58B2DC;
+  padding-top: 10px;
+  height:30px;
+}
+
+.glyphicon.glyphicon-tag{
+  padding-left: 5px;
+  padding-top: 10px;
+  height:30px;
+}
+
+.glyphicon.glyphicon-warning-sign{
+  padding-left: 5px;
+  padding-top: 10px;
+  height:30px;
+}
+
+
+.btn.btn-default{
+  background-color: #66BAB7;
+}
+
+.btn-group{
+  position: relative;
+  top:-20px;
 }
 
 /* =============
@@ -74,13 +189,20 @@ Media Queries
 ============= */
 
 @media screen and (min-width: 480px) and (max-width: 800px) {
-    /*.item {
-        background-color: blue;
-    }*/
+  .container{
+    width:400px;
+  }
+  .map{
+    width:400px;
+  }
+
 }
 
 @media screen and (max-width: 479px) {
-    /*.item {
-        background-color: red;
-    }*/
+  .container{
+    width:0px;
+  }
+  .map{
+    width:100%;
+  }
 }
